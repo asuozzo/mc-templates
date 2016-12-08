@@ -1,19 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-        <!-- Facebook sharing information tags -->
-        <meta property="og:title" content="*|MC:SUBJECT|*">
-        
         <title>*|MC:SUBJECT|*</title>
         
     <style type="text/css">
         #outlook a{
             padding:0;
-        }
-        body{
-            width:100% !important;
         }
         .ReadMsgBody{
             width:100%;
@@ -21,8 +14,19 @@
         .ExternalClass{
             width:100%;
         }
-        body{
-            -webkit-text-size-adjust:none;
+        .ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalClass div{
+            line-height:100%;
+        }
+        body,table,td,p,a,li,blockquote{
+            -webkit-text-size-adjust:100%;
+            -ms-text-size-adjust:100%;
+        }
+        table,td{
+            mso-table-lspace:0pt;
+            mso-table-rspace:0pt;
+        }
+        img{
+            -ms-interpolation-mode:bicubic;
         }
         body{
             margin:0;
@@ -35,23 +39,46 @@
             outline:none;
             text-decoration:none;
         }
-        table td{
-            border-collapse:collapse;
+        table{
+            border-collapse:collapse !important;
         }
-        #backgroundTable{
+        body,#bodyTable,#bodyCell{
             height:100% !important;
             margin:0;
             padding:0;
             width:100% !important;
         }
+        #bodyCell{
+            padding:20px;
+        }
+        #templateContainer{
+            width:600px;
+        }
     /*
     @tab Page
-    @section background color
-    @tip Set the background color for your email. You may want to choose one that matches your company's branding.
+    @section background style
+    @tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
     @theme page
     */
-        body,#backgroundTable{
-            /*@editable*/background-color:#fff;
+        body,#bodyTable{
+            /*@editable*/background-color:#f1f1f1;
+        }
+    /*
+    @tab Page
+    @section background style
+    @tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
+    @theme page
+    */
+        #bodyCell{
+            /*@editable*/border-top:4px solid #f1f1f1;
+        }
+    /*
+    @tab Page
+    @section email border
+    @tip Set the border for your email.
+    */
+        #templateContainer{
+            /*@editable*/border:1px solid #F1F1F1;
         }
     /*
     @tab Page
@@ -59,13 +86,15 @@
     @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
     @style heading 1
     */
-        h1,.h1{
-            /*@editable*/color:#202020;
+        h1{
+            /*@editable*/color:#202020 !important;
             display:block;
-            /*@editable*/font-family:Arial;
-            /*@editable*/font-size:34px;
+            /*@editable*/font-family:Helvetica;
+            /*@editable*/font-size:26px;
+            /*@editable*/font-style:normal;
             /*@editable*/font-weight:bold;
             /*@editable*/line-height:100%;
+            /*@editable*/letter-spacing:normal;
             margin-top:0;
             margin-right:0;
             margin-bottom:10px;
@@ -78,17 +107,20 @@
     @tip Set the styling for all second-level headings in your emails.
     @style heading 2
     */
-        h2,.h2{
-            /*@editable*/color:#202020;
-            /*@editable*/font-family:Helvetica,Arial,sans-serif;
-            /*@editable*/font-size:22px;
-            /*@editable*/font-weight:bold;
-            /*@editable*/line-height:110%;
-            /*@editable*/text-align:left;
+        h2{
+            /*@editable*/color:#404040 !important;
             display:block;
-            margin:0;
-            padding:0 0 5px;
-            letter-spacing:-0.01em;
+            /*@editable*/font-family:Helvetica,sans-serif;
+            /*@editable*/font-size:24px;
+            /*@editable*/font-style:normal;
+            /*@editable*/font-weight:normal;
+            /*@editable*/line-height:100%;
+            /*@editable*/letter-spacing:-.02em;
+            margin-top:0;
+            margin-right:0;
+            margin-bottom:10px;
+            margin-left:0;
+            /*@editable*/text-align:left;
         }
     /*
     @tab Page
@@ -96,18 +128,23 @@
     @tip Set the styling for all third-level headings in your emails.
     @style heading 3
     */
-        h3,.h3{
-            /*@editable*/color:#7F7F7F;
-            /*@editable*/font-family:Helvetica,Arial,sans-serif;
-            /*@editable*/font-size:12px;
-            /*@editable*/font-weight:normal;
-            /*@editable*/line-height:100%;
-            /*@editable*/text-align:left;
+        h3{
+            /*@editable*/color:#606060 !important;
             display:block;
-            text-transform:uppercase;
-            padding:10px 0 5px 0;
-            margin:0;
-            letter-spacing:.5px;
+            /*@editable*/font-family:Helvetica;
+            /*@editable*/font-size:18px;
+            /*@editable*/font-style:normal;
+            /*@editable*/font-weight:bold;
+            /*@editable*/line-height:120%;
+            /*@editable*/letter-spacing:-.02em;
+            margin-top:15px;
+            margin-right:0;
+            margin-bottom:0px;
+            margin-left:0;
+            /*@editable*/text-align:left;
+        }
+        h3 a{
+            text-decoration:underline;
         }
     /*
     @tab Page
@@ -115,57 +152,127 @@
     @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
     @style heading 4
     */
-        h4,.h4{
-            /*@editable*/color:#333333;
-            /*@editable*/font-family:Georgia, serif;
-            /*@editable*/font-size:16px;
-            /*@editable*/font-weight:normal;
-            /*@editable*/line-height:115%;
-            /*@editable*/text-align:left;
+        h4{
+            /*@editable*/color:#808080 !important;
             display:block;
-            padding:10px 0;
-            margin:0;
-            font-style:italic;
-        }
-    /*
-    @tab Page
-    @section heading 5
-    @tip Set the styling for all fourth-level headings in your emails. These should be the smallest of your headings.
-    @style heading 5
-    */
-        h5,.h5{
-            /*@editable*/color:#bebebe;
-            display:block;
-            /*@editable*/font-family:Arial;
-            /*@editable*/font-size:10px;
+            /*@editable*/font-family:Helvetica;
+            /*@editable*/font-size:12px;
+            /*@editable*/font-style:normal;
             /*@editable*/font-weight:normal;
             /*@editable*/line-height:100%;
+            /*@editable*/letter-spacing:.03em;
             margin-top:0;
             margin-right:0;
             margin-bottom:5px;
             margin-left:0;
-            /*@editable*/text-align:center;
             text-transform:uppercase;
+            /*@editable*/text-align:left;
+        }
+    /*
+    @tab Page
+    @section heading 5
+    @tip Set the styling for all fifth-level headings in your emails.
+    @style heading 5
+    */
+        h5{
+            /*@editable*/color:#808080 !important;
+            display:block;
+            /*@editable*/font-family:Helvetica;
+            /*@editable*/font-size:10px;
+            /*@editable*/font-style:normal;
+            /*@editable*/font-weight:normal;
+            /*@editable*/line-height:100%;
+            /*@editable*/letter-spacing:.03em;
+            margin-top:5px;
+            margin-right:0;
+            margin-bottom:0;
+            margin-left:0;
+            text-transform:uppercase;
+            /*@editable*/text-align:left;
+        }
+        h2 a{
+            text-decoration:none !important;
+            font-weight:bold;
+        }
+    /*
+    @tab Page
+    @section hr
+    @tip Set the styling for all horizontal rules.
+    @style hr
+    */
+        hr{
+            /*@editable*/border-top:1px solid #F4EB22;
+            /*@editable*/border-left:0;
+            /*@editable*/border-right:0;
+            /*@editable*/border-bottom:0;
+            /*@editable*/margin:20px 0;
+        }
+        ul{
+            padding-left:20px;
+            margin:0;
+        }
+        li{
+            padding:5px 0;
+        }
+    /*
+    @tab Page
+    @section button style
+    @tip Set the button style
+    @theme page
+    */
+        .emailButton{
+            /*@editable*/background-color:#333;
+            /*@editable*/margin-top:10px;
+            /*@editable*/margin-bottom:10px;
+            border-radius:3px;
+        }
+    /*
+    @tab Page
+    @section button style
+    @tip Set the button style
+    @theme page
+    */
+        .emailButtonContent{
+            /*@editable*/margin-top:5px;
+            padding-top:10px;
+            padding-right:25px;
+            padding-bottom:10px;
+            padding-left:25px;
+        }
+    /*
+    @tab Page
+    @section button style link
+    @tip Set the button style
+    @theme page
+    */
+        .emailButtonContent a:link,.emailButtonContent a:visited,.emailButtonContent a .yshortcuts{
+            /*@editable*/color:#F4EB22 !important;
+            font-family:Helvetica, Arial, sans-serif;
+            font-size:16px;
+            font-weight:bold !important;
+            text-decoration:none !important;
+            font-style:none !important;
         }
     /*
     @tab Header
     @section preheader style
-    @tip Set the background color for your email's preheader area.
-    @theme page
+    @tip Set the background color and bottom border for your email's preheader area.
+    @theme header
     */
         #templatePreheader{
-            /*@editable*/background-color:#fff;
+            /*@editable*/background-color:#F1F1F1;
+            /*@editable*/border-bottom:1px solid #F4EB22;
         }
     /*
     @tab Header
     @section preheader text
     @tip Set the styling for your email's preheader text. Choose a size and color that is easy to read.
     */
-        .preheaderContent div{
-            /*@editable*/color:#505050;
-            /*@editable*/font-family:Arial;
+        .preheaderContent{
+            /*@editable*/color:#808080;
+            /*@editable*/font-family:Helvetica;
             /*@editable*/font-size:10px;
-            /*@editable*/line-height:100%;
+            /*@editable*/line-height:125%;
             /*@editable*/text-align:left;
         }
     /*
@@ -173,20 +280,21 @@
     @section preheader link
     @tip Set the styling for your email's preheader links. Choose a color that helps them stand out from your text.
     */
-        .preheaderContent div a:link,.preheaderContent div a:visited,.preheaderContent div a .yshortcuts{
-            /*@editable*/color:#336699;
+        .preheaderContent a:link,.preheaderContent a:visited,.preheaderContent a .yshortcuts{
+            /*@editable*/color:#606060;
             /*@editable*/font-weight:normal;
             /*@editable*/text-decoration:underline;
         }
     /*
     @tab Header
     @section header style
-    @tip Set the background color and border for your email's header area.
+    @tip Set the background color and borders for your email's header area.
     @theme header
     */
         #templateHeader{
-            /*@editable*/background-color:#FFFFFF;
-            /*@editable*/border-bottom:0;
+            /*@editable*/background-color:#F1F1F1;
+            /*@editable*/border-top:1px solid #F4EB22;
+            /*@editable*/border-bottom:1px solid #F4EB22;
         }
     /*
     @tab Header
@@ -194,13 +302,16 @@
     @tip Set the styling for your email's header text. Choose a size and color that is easy to read.
     */
         .headerContent{
-            /*@editable*/color:#202020;
-            /*@editable*/font-family:Arial;
-            /*@editable*/font-size:34px;
+            /*@editable*/color:#505050;
+            /*@editable*/font-family:Helvetica;
+            /*@editable*/font-size:20px;
             /*@editable*/font-weight:bold;
             /*@editable*/line-height:100%;
-            /*@editable*/padding:0;
-            /*@editable*/text-align:center;
+            /*@editable*/padding-top:0;
+            /*@editable*/padding-right:0;
+            /*@editable*/padding-bottom:0;
+            /*@editable*/padding-left:0;
+            /*@editable*/text-align:left;
             /*@editable*/vertical-align:middle;
         }
     /*
@@ -209,33 +320,54 @@
     @tip Set the styling for your email's header links. Choose a color that helps them stand out from your text.
     */
         .headerContent a:link,.headerContent a:visited,.headerContent a .yshortcuts{
-            /*@editable*/color:#336699;
+            /*@editable*/color:#606060;
             /*@editable*/font-weight:normal;
             /*@editable*/text-decoration:underline;
+        }
+    /*
+    @tab Header
+    @section dateline
+    @tip Set the styling for your email's dateline. Choose a size and color that is easy to read.
+    */
+        .dateline{
+            /*@editable*/background-color:#ffffff;
+            /*@editable*/color:#505050 !important;
+            /*@editable*/font-family:Helvetica;
+            /*@editable*/font-size:20px;
+            /*@editable*/font-weight:bold;
+            /*@editable*/line-height:100%;
+            /*@editable*/padding-top:10px;
+            /*@editable*/padding-right:0;
+            /*@editable*/padding-bottom:5px;
+            /*@editable*/padding-left:0;
+            /*@editable*/vertical-align:middle;
+        }
+    /*
+    @tab Header
+    @section date text
+    @tip Set the font styling for your email's dateline. Choose a size and color that is easy to read.
+    */
+        .dateline h4{
+            /*@editable*/color:#505050;
+            /*@editable*/text-align:right;
+            /*@editable*/padding-right:10px;
+            /*@editable*/padding-left:10px;
+            /*@editable*/text-transform:none;
+            /*@editable*/letter-spacing:0;
         }
         #headerImage{
             height:auto;
             max-width:600px;
         }
-        .headerDate{
-            color:#7F7F7F;
-            font-family:Helvetica,Arial,sans-serif;
-            font-size:12px;
-            font-weight:normal;
-            letter-spacing:0.5px;
-            line-height:200%;
-            padding:3px 0;
-            text-align:right;
-            text-transform:uppercase;
-            vertical-align:middle;
-        }
     /*
     @tab Body
     @section body style
-    @tip Set the background color for your email's body area.
+    @tip Set the background color and borders for your email's body area.
     */
-        #templateContainer,.bodyContent{
-            /*@editable*/background-color:#FFFFFF;
+        #templateBody{
+            /*@editable*/background-color:transparent;
+            /*@editable*/border-top:4px double #F4EB22;
+            /*@editable*/border-bottom:4px double #F4EB22;
         }
     /*
     @tab Body
@@ -244,83 +376,160 @@
     @theme main
     */
         .bodyContent{
-            /*@editable*/color:#454545;
-            /*@editable*/font-family:Arial;
-            /*@editable*/font-size:14px;
-            /*@editable*/line-height:130%;
+            /*@editable*/color:#505050;
+            /*@editable*/font-family:Georgia, "Times New Roman", serif;
+            /*@editable*/font-size:16px;
+            /*@editable*/line-height:120%;
             /*@editable*/text-align:left;
-            padding-bottom:10px;
+            padding-top:30px;
+            padding-right:20px;
+            padding-bottom:20px;
+            padding-left:20px;
         }
     /*
     @tab Body
     @section body link
     @tip Set the styling for your email's main content links. Choose a color that helps them stand out from your text.
     */
-        .bodyContent a:link,.bodyContent div a:visited,.bodyContent div a .yshortcuts{
-            /*@editable*/color:#336699;
-            /*@editable*/font-weight:bold;
-            /*@editable*/text-decoration:none;
+        .bodyContent a:link,.bodyContent a:visited,.bodyContent a .yshortcuts{
+            /*@editable*/color:#606060;
+            /*@editable*/font-weight:inherit;
+            /*@editable*/text-decoration:underline;
         }
         .bodyContent img{
             display:inline;
             height:auto;
+            max-width:560px;
         }
-        div.bodyBox{
-            border-bottom:1px #ddd solid;
-            padding:10px 5px 0 5px;
+        #bodyImage{
+            height:auto;
+            max-width:560px;
         }
-        .staffpick{
-            border-bottom:1px solid #e2e2e2;
-            padding-bottom:10px;
+        #editornote{
+            background-color:#fff;
+        }
+        .templateColumnContainer{
+            width:260px;
         }
     /*
-    @tab Sidebar
-    @section sidebar style
-    @tip Set the background color and border for your email's sidebar area.
+    @tab Columns
+    @section column style
+    @tip Set the background color and borders for your email's column area.
     */
-        #templateSidebar{
+        #templateColumns{
             /*@editable*/background-color:#FFFFFF;
-            /*@editable*/border-left:0;
+            /*@editable*/border-top:1px solid #F4EB22;
+            /*@editable*/border-bottom:1px solid #F4EB22;
         }
     /*
-    @tab Sidebar
-    @section sidebar text
-    @tip Set the styling for your email's sidebar text. Choose a size and color that is easy to read.
+    @tab Columns
+    @section left column text
+    @tip Set the styling for your email's left column content text. Choose a size and color that is easy to read.
     */
-        .sidebarContent div{
+        .leftColumnContent{
             /*@editable*/color:#505050;
-            /*@editable*/font-family:Arial;
-            /*@editable*/font-size:12px;
+            /*@editable*/font-family:Helvetica;
+            /*@editable*/font-size:14px;
             /*@editable*/line-height:150%;
+            padding-top:0;
+            padding-right:20px;
+            padding-bottom:10px;
+            padding-left:20px;
             /*@editable*/text-align:left;
         }
     /*
-    @tab Sidebar
-    @section sidebar link
-    @tip Set the styling for your email's sidebar links. Choose a color that helps them stand out from your text.
+    @tab Columns
+    @section left column link
+    @tip Set the styling for your email's left column content links. Choose a color that helps them stand out from your text.
     */
-        .sidebarContent div a:link,.sidebarContent div a:visited,.sidebarContent div a .yshortcuts{
-            /*@editable*/color:#336699;
+        .leftColumnContent a:link,.leftColumnContent a:visited,.leftColumnContent a .yshortcuts{
+            /*@editable*/color:#606060;
             /*@editable*/font-weight:bold;
             /*@editable*/text-decoration:underline;
         }
-        .sidebarContent img{
+    /*
+    @tab Columns
+    @section right column text
+    @tip Set the styling for your email's right column content text. Choose a size and color that is easy to read.
+    */
+        .rightColumnContent{
+            /*@editable*/color:#505050;
+            /*@editable*/font-family:Helvetica;
+            /*@editable*/font-size:14px;
+            /*@editable*/line-height:150%;
+            padding-top:0;
+            padding-right:20px;
+            padding-bottom:10px;
+            padding-left:20px;
+            /*@editable*/text-align:left;
+        }
+    /*
+    @tab Columns
+    @section right column link
+    @tip Set the styling for your email's right column content links. Choose a color that helps them stand out from your text.
+    */
+        .rightColumnContent a:link,.rightColumnContent a:visited,.rightColumnContent a .yshortcuts{
+            /*@editable*/color:#606060;
+            /*@editable*/font-weight:bold;
+            /*@editable*/text-decoration:underline;
+        }
+        .leftColumnContent img,.rightColumnContent img{
             display:inline;
             height:auto;
+            max-width:260px;
         }
-        div.sidebarBox{
-            border-bottom:1px #ddd solid;
-            padding:10px 5px 15px 5px;
+    /*
+    @tab Columns
+    @section tile ad unit
+    @tip Set the styling for your email's tile ads. Choose a size and color that is easy to read.
+    */
+        .tilead{
+            /*@editable*/color:#505050;
+            /*@editable*/font-family:Helvetica;
+            /*@editable*/font-size:14px !important;
+            /*@editable*/line-height:125% !important;
+            /*@editable*/text-align:left;
+            /*@editable*/background-color:#F1F1F1;
+            border-radius:3px;
+        }
+    /*
+    @tab Columns
+    @section tile ad unit
+    @tip Set the styling for the headline
+    */
+        .tilead h2{
+            /*@editable*/font-size:18px;
+            margin-bottom:5px;
+        }
+    /*
+    @tab Columns
+    @section tile "sponsored"
+    @tip Set the styling for the headline
+    */
+        .tilead h4{
+            /*@editable*/font-size:10px;
+            /*@editable*/text-align:center;
+            padding:0 0 15px 0;
+        }
+    /*
+    @tab Columns
+    @section tile ad link
+    @tip Set the styling for your email's tile ad content links. Choose a color that helps them stand out from your text.
+    */
+        .tilead a:link,.tilead a:visited,.tilead a .yshortcuts{
+            /*@editable*/color:#606060;
+            /*@editable*/font-weight:normal;
+            /*@editable*/text-decoration:underline;
         }
     /*
     @tab Footer
     @section footer style
-    @tip Set the background color and top border for your email's footer area.
+    @tip Set the background color and borders for your email's footer area.
     @theme footer
     */
         #templateFooter{
-            /*@editable*/background-color:#333;
-            border-top:6px #f4eb22 solid;
+            /*@editable*/background-color:#F1F1F1;
+            /*@editable*/border-top:2px solid #F4EB22;
         }
     /*
     @tab Footer
@@ -328,414 +537,642 @@
     @tip Set the styling for your email's footer text. Choose a size and color that is easy to read.
     @theme footer
     */
-        .footerContent div{
-            /*@editable*/color:#ccc;
-            /*@editable*/font-family:Arial;
-            /*@editable*/font-size:12px;
-            /*@editable*/line-height:125%;
-            /*@editable*/text-align:left;
-            background-color:#333;
+        .footerContent{
+            /*@editable*/color:#808080;
+            /*@editable*/font-family:Helvetica;
+            /*@editable*/font-size:14px;
+            /*@editable*/line-height:150%;
+            padding-top:20px;
+            padding-right:20px;
+            padding-bottom:20px;
+            padding-left:20px;
+            /*@editable*/text-align:center;
         }
     /*
     @tab Footer
     @section footer link
     @tip Set the styling for your email's footer links. Choose a color that helps them stand out from your text.
     */
-        .footerContent div a:link,.footerContent div a:visited,.footerContent div a .yshortcuts{
-            /*@editable*/color:#f4eb22;
+        .footerContent a:link,.footerContent a:visited,.footerContent a .yshortcuts,.footerContent a span{
+            /*@editable*/color:#606060;
             /*@editable*/font-weight:normal;
             /*@editable*/text-decoration:underline;
         }
-        .footerContent img{
-            display:inline;
+    @media only screen and (max-width: 480px){
+        body,table,td,p,a,li,blockquote{
+            -webkit-text-size-adjust:none !important;
         }
+
+}   @media only screen and (max-width: 480px){
+        body{
+            width:100% !important;
+            min-width:100% !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+        #bodyCell{
+            padding:10px !important;
+        }
+
+}   @media only screen and (max-width: 480px){
     /*
-    @tab Footer
-    @section social bar style
-    @tip Set the background color and border for your email's footer social bar.
-    @theme footer
+    @tab Mobile Styles
+    @section template width
+    @tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work for you, set the width to 300px instead.
     */
-        #social{
-            /*@editable*/border:0;
+        #templateContainer{
+            /*@tab Mobile Styles
+@section template width
+@tip Make the template fluid for portrait or landscape view adaptability. If a fluid layout doesn't work for you, set the width to 300px instead.*/max-width:600px !important;
+            /*@editable*/width:100% !important;
         }
+
+}   @media only screen and (max-width: 480px){
     /*
-    @tab Footer
-    @section social bar style
-    @tip Set the background color and border for your email's footer social bar.
+    @tab Mobile Styles
+    @section heading 1
+    @tip Make the first-level headings larger in size for better readability on small screens.
     */
-        #social div{
-            /*@editable*/text-align:center;
+        h1{
+            /*@editable*/font-size:24px !important;
+            /*@editable*/line-height:100% !important;
         }
+
+}   @media only screen and (max-width: 480px){
     /*
-    @tab Footer
-    @section utility bar style
-    @tip Set the background color and border for your email's footer utility bar.
-    @theme footer
+    @tab Mobile Styles
+    @section heading 2
+    @tip Make the second-level headings larger in size for better readability on small screens.
     */
-        #utility{
-            /*@editable*/border:0;
+        h2{
+            /*@editable*/font-size:24px !important;
+            /*@editable*/line-height:100% !important;
         }
+
+}   @media only screen and (max-width: 480px){
     /*
-    @tab Footer
-    @section utility bar style
-    @tip Set the background color and border for your email's footer utility bar.
+    @tab Mobile Styles
+    @section heading 3
+    @tip Make the third-level headings larger in size for better readability on small screens.
     */
-        #utility div{
-            /*@editable*/text-align:center;
+        h3{
+            /*@editable*/font-size:16px !important;
+            /*@editable*/line-height:120% !important;
         }
-        #monkeyRewards img{
-            max-width:190px;
+
+}   @media only screen and (max-width: 480px){
+    /*
+    @tab Mobile Styles
+    @section heading 4
+    @tip Make the fourth-level headings larger in size for better readability on small screens.
+    */
+        h4{
+            /*@editable*/font-size:14px !important;
+            /*@editable*/line-height:100% !important;
         }
-</style></head>
+
+}   @media only screen and (max-width: 480px){
+        .emailButton{
+            max-width:600px !important;
+            width:100% !important;
+            font-style:normal !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+    /*
+    @tab Mobile Styles
+    @section buttons
+    @tip change the font size on mobile buttons
+    */
+        .emailButton a{
+            /*@tab Mobile Styles
+@section buttons
+@tip change the font size on mobile buttons*/display:block !important;
+            /*@editable*/font-size:18px !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+        #templatePreheader{
+            display:none !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+    /*
+    @tab Mobile Styles
+    @section header image
+    @tip Make the main header image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.
+    */
+        #headerImage{
+            /*@tab Mobile Styles
+@section header image
+@tip Make the main header image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.*/height:auto !important;
+            /*@editable*/max-width:600px !important;
+            /*@editable*/width:100% !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+    /*
+    @tab Mobile Styles
+    @section header text
+    @tip Make the header content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+    */
+        .headerContent{
+            /*@editable*/font-size:20px !important;
+            /*@editable*/line-height:125% !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+    /*
+    @tab Mobile Styles
+    @section body text
+    @tip Make the body content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+    */
+        .bodyContent{
+            /*@editable*/font-size:18px !important;
+            /*@editable*/line-height:125% !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+    /*
+    @tab Mobile Styles
+    @section body image
+    @tip Make the main body image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.
+    */
+        #bodyImage{
+            /*@tab Mobile Styles
+@section body image
+@tip Make the main body image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.*/height:auto !important;
+            /*@editable*/max-width:560px !important;
+            /*@editable*/width:100% !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+        .tilead{
+            /*@editable*/font-size:15px !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+        .templateColumnContainer{
+            display:block !important;
+            width:100% !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+    /*
+    @tab Mobile Styles
+    @section column image
+    @tip Make the column image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.
+    */
+        .columnImage{
+            /*@tab Mobile Styles
+@section column image
+@tip Make the column image fluid for portrait or landscape view adaptability, and set the image's original width as the max-width. If a fluid setting doesn't work, set the image width to half its original size instead.*/height:auto !important;
+            /*@editable*/max-width:480px !important;
+            /*@editable*/width:100% !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+    /*
+    @tab Mobile Styles
+    @section left column text
+    @tip Make the left column content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+    */
+        .leftColumnContent{
+            /*@editable*/font-size:16px !important;
+            /*@editable*/line-height:125% !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+    /*
+    @tab Mobile Styles
+    @section right column text
+    @tip Make the right column content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
+    */
+        .rightColumnContent{
+            /*@editable*/font-size:16px !important;
+            /*@editable*/line-height:125% !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+    /*
+    @tab Mobile Styles
+    @section footer text
+    @tip Make the body content text larger in size for better readability on small screens.
+    */
+        .footerContent{
+            /*@editable*/font-size:14px !important;
+            /*@editable*/line-height:115% !important;
+        }
+
+}   @media only screen and (max-width: 480px){
+        .footerContent a{
+            display:block !important;
+        }
+
+}</style></head>
     <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
         <center>
-            <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="backgroundTable">
-                <tr>
-                    <td align="center" valign="top">
-                        <!-- // Begin Template Preheader \\ -->
-                        <table border="0" cellpadding="10" cellspacing="0" width="600" id="templatePreheader">
-                            <tr>
-                                <td valign="top" class="preheaderContent">
-                                
-                                    <!-- // Begin Module: Standard Preheader \ -->
-                                    <table border="0" cellpadding="3" cellspacing="5" width="100%">
-                                        <tr>
-                                            <td valign="top">
-                                                <div mc:edit="std_preheader_content">
-                                                     Use this area to offer a short teaser of your email's content. Text here will show in the preview area of some email clients.
-                                                </div>
-                                            </td>
-                                            <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                                            <td valign="top" width="150">
-                                                <div mc:edit="std_preheader_browser">
-                                                    Is this email not displaying correctly?<br><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a>.
-                                                </div>
-                                            </td>
-                                            <!-- *|END:IF|* -->
-                                            <td valign="top" width="150">
-                                                <div mc:edit="std_preheader_links">
-                                                    Like this service? Tell a friend! <br><a href="*|FORWARD|*" target="_blank">Forward this email to a friend</a>.
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <!-- // End Module: Standard Preheader \ -->
-                                
+            <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+                <tr><td align="center" valign="top" id="bodyCell">
+                    <!-- BEGIN TEMPLATE // -->
+                    <table border="0" cellpadding="0" cellspacing="0" id="templateContainer">
+                        <tr><td align="center" valign="top">
+                            <!-- BEGIN PREHEADER // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templatePreheader">
+                                <tr><td valign="top" class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:20px;" mc:edit="preheader_content1">
+                                    Use this area to offer a short teaser of your email's content. Text here will show in the preview area of some email clients.
                                 </td>
-                            </tr>
+                                <!-- *|IFNOT:ARCHIVE_PAGE|* -->
+                                <td valign="top" width="180" class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:0;">
+                                    Email not displaying correctly?<br><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a>.
+                                </td>
+                                <!-- *|END:IF|* -->
+                                </tr>
+                            </table>
+                            <!-- // END PREHEADER -->
+                        </td></tr>
+                        <tr><td align="center" valign="top">
+                            <!-- BEGIN HEADER // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
+                                <tr><td valign="top" class="headerContent" style="background-color:#F1F1F1 !important;">
+                                    <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/6dc7c6fc-7292-4fcf-a9b4-e673f6121e6f.png" style="max-width:600px;" id="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="">
+                                </td></tr>
+                                <tr mc:hideable><td valign="top" class="headerContent" style="background-color:#F1F1F1 !important;">
+                                    <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/ef14cd9c-8a2a-44d7-a86f-aae047374359.jpg" style="max-width:600px;" id="headerImage" mc:label="header_image_ad" mc:edit="header_ad_image" mc:allowdesigner="" mc:allowtext="">
+                                </td></tr>                                       
+                                 <tr><td valign="top" class="dateline">
+                                    <h4><div mc:edit="date">Friday, April 21, 2016</div></h4>
+                                </td></tr>
+                            </table>
+                            <!-- // END HEADER -->
+                        </td></tr>
+                        <tr mc:hideable><td align="center" valign="top">
+                            <!-- BEGIN BODY // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="editornote"> <!--EDIT-->
+                                <tr><td valign="top" class="bodyContent" mc:edit="editorsnote">
+                                    <h2>Editor's Note</h2>
+                                    Caramel white chocolate cheesecake, gelato snow cones. Snow cones gelato peanut butter, nut mocha cookies and cream sorbet, cup snow cones chocolate. Caramel toppings cone chocolate chip gelato soft serve white chocolate cookies and cream butterscotch apple froyo.<br><br>
+                                    <em>— Rachel Elizabeth Jones</em>
+                                </td></tr>
+                            </table>
+                            <!-- // END BODY -->
+                        </td></tr>
+                        <tr><td align="center" valign="top">
+                            <!-- BEGIN COLUMNS 1 // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns" style="background-color:#FFFFFF;border-top: 1px solid #F4EB22;border-bottom: 1px solid #F4EB22;">
+                                <tr><td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                    <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                        <tr><td class="leftColumnContent">
+                                            <h4><div mc:edit="left_column_genre1">Genre</div></h4>
+                                        </td></tr>
+                                        <tr><td class="leftColumnContent">
+                                            <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/efb6fb80-7018-4dfc-81ee-80c44454c32c.jpg" style="max-width:260px;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image">
+                                        </td></tr>
+                                        <tr><td valign="top" class="leftColumnContent">
+                                            <div mc:edit="left_column_content1"><h2><a href="#">Headline here</a></h2>
+                                            Text here</div>
+                                            <!-- BUTTON // -->
+                                            <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
+                                                <tr>
+                                                    <td align="center" valign="middle" class="emailButtonContent">
+                                                        <div mc:edit="button_content1">
+                                                        <a href="#" target="_blank">Find out more</a></div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td></tr>
+                                    </table>
+                                </td>
+                                <td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                    <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                        <tr><td class="rightColumnContent">
+                                            <h4><div mc:edit="right_column_genre1">Genre</div></h4>
+                                        </td></tr>
+                                        <tr><td class="rightColumnContent">
+                                            <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/efb6fb80-7018-4dfc-81ee-80c44454c32c.jpg" class="columnImage" mc:label="right_column_image" style="max-width:260px;" mc:edit="right_column_image">
+                                        </td></tr>
+                                        <tr><td valign="top" class="rightColumnContent">
+                                            <div mc:edit="right_column_content1"><h2><a href="#">Headline here</a></h2>
+                                            Text here</div>
+                                            <!-- BUTTON // -->
+                                            <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
+                                                <tr><td align="center" valign="middle" class="emailButtonContent">
+                                                    <div mc:edit="button_content2"><a href="#" target="_blank">Find out more and sign up</a></div>
+                                                </td></tr>
+                                            </table>
+                                        </td></tr>
+                                    </table>
+                                </td></tr>
+                            </table>
+                            <!-- // END COLUMNS 1 -->
+                        </td></tr>
+                        <tr><td align="center" valign="top">
+                            <!-- BEGIN BODY2 // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+                                <tr><td valign="top" class="bodyContent">
+                                    <div mc:edit="featuredspot1">
+                                    <h4>Call to Artists</h4>
+                                    <h2><a href="#">Story Illustrators Wanted</a></h2>
+                                    Artists sought to depict scenes from the ballads of poet George Albert Leddy (1883-1967).
+                                    </div>
+                                    <!-- BUTTON // -->
+                                            <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
+                                                <tr><td align="center" valign="middle" class="emailButtonContent">
+                                                    <div mc:edit="button_content001"><a href="#" target="_blank">Find out More</a></div>
+                                                </td></tr>
+                                            </table>
+                                </td></tr>
+                            </table>
+                            <!-- // END BODY2-->
+                        </td></tr>
+                        <tr mc:hideable><td align="center" valign="top">
+                            <!-- BEGIN COLUMNS 2 // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns" style="background-color:#FFFFFF;border-top: 1px solid #F4EB22;border-bottom: 1px solid #F4EB22;">
+                                <tr><td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                    <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                        <tr><td class="leftColumnContent">
+                                            <h4><div mc:edit="left_column_genre2">Genre</div></h4>
+                                        </td></tr>
+                                        <tr><td class="leftColumnContent">
+                                            <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/efb6fb80-7018-4dfc-81ee-80c44454c32c.jpg" style="max-width:260px;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image2">
+                                        </td></tr>
+                                        <tr><td valign="top" class="leftColumnContent">
+                                            <div mc:edit="left_column_content2"><h2><a href="#">Headline here</a></h2>
+                                            Text here</div>
+                                            <!-- BUTTON // -->
+                                            <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
+                                                <tr><td align="center" valign="middle" class="emailButtonContent">
+                                                    <div mc:edit="button_content3">
+                                                    <a href="#" target="_blank">Find out more</a></div>
+                                                </td></tr>
+                                            </table>
+                                        </td></tr>
+                                    </table>
+                                </td>
+                                <td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                    <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                        <tr><td class="rightColumnContent">
+                                            <h4><div mc:edit="right_column_genre2">Genre</div></h4>
+                                        </td></tr>
+                                        <tr><td class="rightColumnContent">
+                                            <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/efb6fb80-7018-4dfc-81ee-80c44454c32c.jpg" class="columnImage" mc:label="right_column_image" style="max-width:260px;" mc:edit="right_column_image2">
+                                        </td></tr>
+                                        <tr><td valign="top" class="rightColumnContent">
+                                            <div mc:edit="right_column_content2"><h2><a href="#">Headline here</a></h2>
+                                            Text here</div>
+                                            <!-- BUTTON // -->
+                                            <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
+                                                <tr><td align="center" valign="middle" class="emailButtonContent">
+                                                    <div mc:edit="button_content4">
+                                                    <a href="#" target="_blank">Get more information!</a></div>
+                                                </td></tr>
+                                            </table>
+                                        </td></tr>
+                                    </table>
+                                </td></tr>
+                            </table>
+                            <!-- // END COLUMNS 2 -->
+                        </td></tr>
+                        <tr mc:hideable><td align="center" valign="top">
+                            <!-- BEGIN BODY2 // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody" style="border-top: 4px double #F4EB22;border-bottom: 4px double #F4EB22;">
+                                <tr><td valign="top" class="bodyContent">
+                                    <div mc:edit="featuredspot2">
+                                    <h4>Art job</h4>
+                                    <h2><a href="#">Packaging Developer</a></h2>
+                                    Twincraft Skincare in Winooski seeks a developer to take projects from concept art to production.</div>
+<!-- BUTTON // -->
+                                     <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
+                                        <tr><td align="center" valign="middle" class="emailButtonContent">
+                                         <div mc:edit="button_content002"><a href="#" target="_blank">Get more information</a></div>
+                                        </td></tr>
+                                     </table>
+                                </td></tr>
+                            </table>
+                            <!-- // END BODY2-->
+                        </td></tr>
+                        <tr mc:hideable><td align="center" valign="top">
+                            <!-- BEGIN COLUMNS 3 // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns" style="background-color:#FFFFFF;border-top: 1px solid #F4EB22;border-bottom: 1px solid #F4EB22;">
+                                <tr><td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                    <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                        <tr><td class="leftColumnContent">
+                                            <h4><div mc:edit="left_column_genre3">Genre</div></h4>
+                                        </td></tr>
+                                        <tr><td class="leftColumnContent">
+                                            <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/efb6fb80-7018-4dfc-81ee-80c44454c32c.jpg" style="max-width:260px;" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image3">
+                                        </td></tr>
+                                        <tr><td valign="top" class="leftColumnContent">
+                                            <div mc:edit="left_column_content3"><h2><a href="#">Headline here</a></h2>
+                                            Text here</div>
+                                            <!-- BUTTON // -->
+                                            <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
+                                                <tr><td align="center" valign="middle" class="emailButtonContent">
+                                                    <div mc:edit="button_content5">
+                                                    <a href="#" target="_blank">All the details</a></div>
+                                                </td></tr>
+                                            </table>
+                                        </td></tr>
+                                    </table>
+                                </td>
+                                <td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                    <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                        <tr><td class="rightColumnContent">
+                                            <h4><div mc:edit="right_column_genre3">genre</div></h4>
+                                        </td></tr>
+                                        <tr><td class="rightColumnContent">
+                                            <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/efb6fb80-7018-4dfc-81ee-80c44454c32c.jpg" class="columnImage" mc:label="right_column_image" style="max-width:260px;" mc:edit="right_column_image3">
+                                        </td></tr>
+                                        <tr><td valign="top" class="rightColumnContent">
+                                            <div mc:edit="right_column_content3"><h2><a href="#">Headline here</a></h2>
+                                            Text here</div>
+                                            <!-- BUTTON // -->
+                                            <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
+                                                <tr><td align="center" valign="middle" class="emailButtonContent">
+                                                    <div mc:edit="button_content6"><a href="#" target="_blank">Find out more</a></div>
+                                                </td></tr>
+                                            </table>
+                                        </td></tr>
+                                    </table>
+                                </td></tr>
+                            </table>
+                            <!-- // END COLUMNS 3 -->
+                        </td></tr>
+                        <tr mc:hideable><td align="center" valign="top">
+                            <!-- BEGIN BODY3 // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody" style="border-top: 4px double #F4EB22;border-bottom: 4px double #F4EB22;">
+                                <tr><td valign="top" class="bodyContent">
+                                    <div mc:edit="staffpick3"><h4>Classes</h4>
+                                    <h2><a href="#">Monotype/Monoprint Workshop</a></h2>
+                                    This two-day workshop, July 11 and 12, is led by Lyna Lou Nordstrom for students of all levels.
+                                    </div>
+                                    <!-- BUTTON // -->
+                                    <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
+                                      <tr><td align="center" valign="middle" class="emailButtonContent">
+                                       <div mc:edit="button_content003"><a href="#" target="_blank">Find out more and sign up</a></div>
+                                      </td></tr>
+                                   </table>
+                                </td></tr>
+                            </table>
+                            <!-- // END BODY3-->
+                        </td></tr>
+                        <tr mc:repeatable><td align="center" valign="top">
+                            <!-- BEGIN COLUMNS 4 // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns" style="background-color:#FFFFFF;border-top: 1px solid #F4EB22;border-bottom: 1px solid #F4EB22;">
+                                <tr><td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                    <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                        <tr><td class="leftColumnContent">
+                                            <h4><div mc:edit="left_column_genre4">Genre</div></h4>
+                                        </td></tr>
+                                        <tr><td class="leftColumnContent">
+                                            <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/efb6fb80-7018-4dfc-81ee-80c44454c32c.jpg" style="max-width:260px;" class="columnImage" mc:label="left_column_image4" mc:edit="left_column_image4">
+                                        </td></tr>
+                                        <tr><td valign="top" class="leftColumnContent">
+                                            <div mc:edit="left_column_content4"><h2><a href="#">Headline here</a></h2>Text here</div>
+                                            <!-- BUTTON // -->
+                                            <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
+                                                <tr><td align="center" valign="middle" class="emailButtonContent">
+                                                    <div mc:edit="button_content7"><a href="#" target="_blank">All the details</a></div>
+                                                </td></tr>
+                                            </table>
+                                        </td></tr>
+                                    </table>
+                                </td>
+                                <td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                    <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                        <tr><td class="rightColumnContent">
+                                            <h4><div mc:edit="right_column_genre4">Genre</div></h4>
+                                        </td></tr>
+                                        <tr><td class="rightColumnContent">
+                                            <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/efb6fb80-7018-4dfc-81ee-80c44454c32c.jpg" class="columnImage" mc:label="right_column_image4" style="max-width:260px;" mc:edit="right_column_image4">
+                                        </td></tr>
+                                        <tr><td valign="top" class="rightColumnContent">
+                                            <div mc:edit="right_column_content4"><h2><a href="#">Headline</a></h2>
+                                            Text here</div>
+                                            <!-- BUTTON // -->
+                                            <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
+                                                <tr><td align="center" valign="middle" class="emailButtonContent">
+                                                        <div mc:edit="button_content8"><a href="#" target="_blank">Find out more</a></div>
+                                                </td></tr>
+                                            </table>
+                                        </td></tr>
+                                    </table>
+                                </td></tr>
+                            </table>
+                            <!-- // END COLUMNS 3 -->
+                        </td></tr>
+                        <tr><td align="center" valign="top">
+                            <!-- BEGIN COLUMNS 5 // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateColumns" style="background-color:#FFFFFF;border-top: 1px solid #F4EB22;border-bottom: 1px solid #F4EB22;"><tr>
+                                <td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                    <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                        <tr><td valign="top" class="leftColumnContent" style="padding-bottom:5px !important;">
+                                            <h4>Art News</h4>
+                                        </td></tr>
+                                        <tr mc:repeatable><td valign="top" class="leftColumnContent" id="headline" mc:edit="headline1">
+                                            <h3><a href="#">Headline</a></h3>
+                                            Pamela Polston finds out what mysterious object lurks in former governor James Hartness' portrait. <b>&rarr;</b>
+                                        </td></tr>
+                                        <tr><td valign="top" class="leftColumnContent">
+                                            <!-- BUTTON // -->
+                                            <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
+                                                <tr>
+                                                    <td align="center" valign="middle" class="emailButtonContent">
+                                                        <div mc:edit="button_content10">
+                                                        <a href="http://www.sevendaysvt.com/vermont/arts-life/Section?oid=2125921" target="_blank">Read more art news</a></div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td></tr>
+                                    </table>
+                                </td>
+                               <td align="center" valign="top" class="templateColumnContainer" style="padding-top:20px;">
+                                  <table border="0" cellpadding="20" cellspacing="0" width="100%">
+                                      <tr><td class="rightColumnContent">
+                                          <h4>Advertisement</h4>
+                                      </td></tr>
+                                      <tr mc:repeatable><td class="rightColumnContent">
+                                          <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/e3d5afa9-7e5e-411c-904f-9bc4596464e4.jpg" class="columnImage" mc:label="right_column_image" style="max-width:260px;" mc:edit="right_column_image4">
+                                      </td></tr>
+                                  </table>
+                              </td>
+                            </tr></table>
+                            <!-- // END COLUMNS 5 -->
+                        </td></tr>
+                        <tr mc:hideable>
+    <td align="center" valign="top">
+        <!-- BEGIN COLUMNS3 // -->
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+            <tr>
+                <td valign="top" class="bodyContent">
+                         <div mc:edit="kia"><span style="font-size:26px;font-weight:bold;">Want more?</span> Get all our recent stories delivered to your inbox each morning. <a href="*|UPDATE_PROFILE|*">Subscribe to Know It All.</a></div>
+                </td>
+                                </tr>
+                                </table>
+                            <!-- END COLUMNS3 // -->
+                            </td>
+                        </tr>
+                        <tr><td align="center" valign="top">
+                        <!-- BEGIN BOTTOMLINKS // -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody" style="border-top: 4px double #F4EB22;border-bottom: 4px double #F4EB22;">
+                            <tr><td valign="top" style="text-align:center;" class="bodyContent">
+                                <span style="display:inline-block;padding-right:10px;padding-left:10px;"><a href="http://www.sevendaysvt.com/vermont/LocationSearch?locationCategory=2292694" style="text-decoration: none;" target="_blank">Galleries</a></span>&nbsp;&nbsp;<span style="display:inline-block;padding-right:10px;padding-left:10px;"><a href="http://www.sevendaysvt.com/blogs/LiveCulture/" style="text-decoration: none;" target="_blank">Live Culture Blog</a></span>&nbsp;&nbsp;<span style="display:inline-block;padding-right:10px;padding-left:10px;"><a href="http://www.sevendaysvt.com/vermont/art-review/Category?oid=2125927" style="text-decoration: none;" target="_blank">Art Reviews</a></span>&nbsp;&nbsp;<span style="display:inline-block;padding-right:10px;padding-left:10px;"><a href="http://www.sevendaysvt.com/vermont/EventSearch?eventSection=2181940" style="text-decoration: none;" target="_blank">Art Shows</a></span>
+                            </td></tr>
                         </table>
-                        <!-- // End Template Preheader \\ -->
-                        <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer">
-                            <tr>
-                                <td align="center" valign="top">
-                                    <!-- // Begin Template Header \\ -->
-                                    <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateHeader">
-                                        <tr>
-                                            <td class="headerContent">
-                                            
-                                                <!-- // Begin Module: Standard Header Image \\ -->
-                                                <img src="http://www.sevendaysvt.com/general/emailnewsletters/review/review-banner.png" style="max-width:600px;" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="">
-                                                <!-- // End Module: Standard Header Image \\ -->
-                                                <div style=""><img src="http://placekitten.com/600/40" mc:label="sponsor_image" mc:edit="sponsor_image" mc:allowdesigner=""></div>
-                                <div mc:edit="date" class="headerDate">Friday, March 2, 2014</div>
-                                            
-                                            </td>
-                                        </tr>
+                        <!-- // END BOTTOMLINKS-->
+                        </td></tr>
+                        <tr><td align="center" valign="top">
+                            <!-- BEGIN FOOTER // -->
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
+                                <tr><td valign="top" class="footerContent" align="center" style="padding-left:9px;padding-right:9px;">
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border: 1px solid #EEEEEE;background-color: #FAFAFA;"><tr>
+                                        <td align="right" valign="top" style="padding-bottom:10px;padding-top:10px;">
+                                            <a href="https://www.facebook.com/sevendaysvt" target="_blank"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-facebook-96.png" alt="Facebook" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
+                                        </td>
+                                        <td align="center" valign="top" style="padding-bottom:10px;padding-top:10px;padding-right:10px;padding-left:10px;width:60px;">
+                                            <a href="mailto:yourfriends@sevendaysvt.com" target="_blank"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-forwardtofriend-96.png" alt="Email" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
+                                        </td>
+                                        <td align="left" valign="top" style="padding-bottom:10px;padding-top:10px;">
+                                            <a href="https://instagram.com/sevendaysvt" target="_blank"><img src="http://cdn-images.mailchimp.com/icons/social-block-v2/color-instagram-96.png" alt="Instagram" class="mcnFollowBlockIcon" width="48" style="width:48px; max-width:48px; display:block;"></a>
+                                        </td></tr>
                                     </table>
-                                    <!-- // End Template Header \\ -->
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="center" valign="top">
-                                    <!-- // Begin Template Body \\ -->
-                                    <table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
-                                        <tr>
-                                            <td valign="top" class="bodyContent">
-                                                <table border="0" cellpadding="0" cellspacing="0">
-                                                    
-                                                    
-                                                    <!-- ROW #1 --> 
-                                                    <tr valign="top">
-                                                        <td width="288">
-                                                            <img src="http://placekitten.com/288/216" mc:edit="spot1_img">
-                                                            <div mc:edit="spot1a">
-                                                            <h3>GENRE</h3>
-                                                            <h2>Event Name</h2>
-                                                            <div class="bodyContent">Blurb goes here.</div>
-                                                            <div class="bodyContent">Event info.</div>
-                                                            </div>
-                                                        </td>
-                                                        <td width="24">
-                                                        </td>
-                                                        
-                                                
-                                                        <td width="288">
-                                                            <img src="http://placekitten.com/g/288/216" mc:edit="spot2_img">
-                                                            <div mc:edit="spot2">
-                                                            <h3>GENRE</h3>
-                                                            <h2>Event Name</h2>
-                                                            <div class="bodyContent">Blurb goes here.</div>
-                                                            <div class="bodyContent">Event info.</div>
-                                                            </div>
-                                                        </td>
-                                                  </tr>
-                                                        <tr><td colspan="3">&nbsp;</td></tr>
-                                                        
-                                                  <!-- ROW #2 -->   
-                                                    <tr valign="top">
-                                                        <td width="288">
-                                                            <img src="http://placekitten.com/288/216" mc:edit="spot3_img">
-                                                            <div mc:edit="spot3">
-                                                            <h3>GENRE</h3>
-                                                            <h2>Event Name</h2>
-                                                            <div class="bodyContent">Blurb goes here.</div>
-                                                            <div class="bodyContent">Event info.</div>
-                                                            </div>
-                                                        </td>
-                                                        <td width="24">
-                                                        </td>
-                                                        
-                                                
-                                                        <td width="288">
-                                                            <img src="http://placekitten.com/g/288/216" mc:edit="spot4_img">
-                                                            <div mc:edit="spot4">
-                                                            <h3>GENRE</h3>
-                                                            <h2>Event Name</h2>
-                                                            <div class="bodyContent">Blurb goes here.</div>
-                                                            <div class="bodyContent">Event info.</div>
-                                                            </div>
-                                                        </td>
-                                                  </tr>
-                                                  <tr><td colspan="3">&nbsp;</td></tr>      
-                                                
-                                                  <!-- ROW #3 -->   
-                                                    <tr valign="top">
-                                                        <td width="288">
-                                                            <img src="http://placekitten.com/288/216" mc:edit="spot5_img">
-                                                            <div mc:edit="spot5">
-                                                            <h3>GENRE</h3>
-                                                            <h2>Event Name</h2>
-                                                            <div class="bodyContent">Blurb goes here.</div>
-                                                            <div class="bodyContent">Event info.</div>
-                                                            </div>
-                                                        </td>
-                                                        <td width="24">
-                                                        </td>
-                                                        
-                                                
-                                                        <td width="288">
-                                                            <img src="http://placekitten.com/g/288/216" mc:edit="spot6_img">
-                                                            <div mc:edit="spot6">
-                                                            <h3>GENRE</h3>
-                                                            <h2>Event Name</h2>
-                                                            <div class="bodyContent">Blurb goes here.</div>
-                                                            <div class="bodyContent">Event info.</div>
-                                                            </div>
-                                                        </td>
-                                                  </tr>
-                                                    <tr><td colspan="3">&nbsp;</td></tr>
-
-                                                   <!-- ROW #4 -->
-                                                    <tr valign="top" mc:hideable>
-                                                        <td width="288">
-                                                            <img src="http://placekitten.com/288/216" mc:edit="spot7_img">
-                                                            <div mc:edit="spot7">
-                                                            <h3>GENRE</h3>
-                                                            <h2>Event Name</h2>
-                                                            <div class="bodyContent">Blurb goes here.</div>
-                                                            <div class="bodyContent">Event info.</div>
-                                                            </div>
-                                                        </td>
-                                                        <td width="24">
-                                                        </td>
-                                                        
-                                                
-                                                        <td width="288">
-                                                            <img src="http://placekitten.com/g/288/216" mc:edit="spot8_img">
-                                                            <div mc:edit="spot8">
-                                                            <h3>GENRE</h3>
-                                                            <h2>Event Name</h2>
-                                                            <div class="bodyContent">Blurb goes here.</div>
-                                                            <div class="bodyContent">Event info.</div>
-                                                            </div>
-                                                        </td>
-                                                  </tr>
-                                                    <tr><td colspan="3">&nbsp;</td></tr> 
-
-
-                                                    <!-- ROW #5 -->
-                                                    <tr valign="top" mc:hideable>
-                                                        <td width="288">
-                                                            <img src="http://placekitten.com/288/216" mc:edit="spot9_img">
-                                                            <div mc:edit="spot9">
-                                                            <h3>GENRE</h3>
-                                                            <h2>Event Name</h2>
-                                                            <div class="bodyContent">Blurb goes here.</div>
-                                                            <div class="bodyContent">Event info.</div>
-                                                            </div>
-                                                        </td>
-                                                        <td width="24">
-                                                        </td>
-                                                        
-                                                
-                                                        <td width="288">
-                                                            <img src="http://placekitten.com/g/288/216" mc:edit="spot10_img">
-                                                            <div mc:edit="spot10">
-                                                            <h3>GENRE</h3>
-                                                            <h2>Event Name</h2>
-                                                            <div class="bodyContent">Blurb goes here.</div>
-                                                            <div class="bodyContent">Event info.</div>
-                                                            </div>
-                                                        </td>
-                                                  </tr>
-                                                    <tr><td colspan="3">&nbsp;</td></tr> 
-
-
-
-                                                </table>
-                                                <!-- End Spotlights -->
-                                                
-                                                <!-- Begin Bottom Half -->
-                                                <table border="0" cellpadding="0" cellspacing="0">
-                                                    <tr valign="top">
-                                                    
-                                                        <!-- Begin Sidebar -->
-                                                        <td width="195">
-                                                            <table border="0" cellpadding="0" cellspacing="0">
-                                                                <tr mc:hideable>
-                                                                    <td style="border-top:solid 1px #ccc; padding:5px 0;">
-                                                                        <div mc:edit="sidebar_ad_1">
-                                                                        <h5>Advertisement</h5>
-                                                                        <img src="http://placekitten.com/195/300">
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr mc:hideable>
-                                                                    <td style="border-top:solid 1px #ccc; padding:5px 0;">
-                                                                        <div mc:edit="sidebar_ad_2">
-                                                                        <h5>Advertisement</h5>
-                                                                        <img src="http://placekitten.com/g/195/300">
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                            <tr mc:hideable>
-                                                                    <td style="border-top:solid 1px #ccc; padding:5px 0;">
-                                                                        <div mc:edit="sidebar_ad_3">
-                                                                        <h5>Advertisement</h5>
-                                                                        <img src="http://placekitten.com/195/300">
-                                                                        </div>
-                                                                    </td>
-                                                                </tr> 
-                                                            </table>
-                                                        </td>
-                                                        <!-- End Sidebar -->
-                                                        
-                                                        <!-- More Content -->
-                                                        <td width="24">
-                                                        </td>
-                                                        <td width="381">
-                                                            <table border="0" cellpadding="0" cellspacing="0">
-                                                                <tr mc:hideable>
-                                                                    <td style="border-top:solid 1px #ccc; padding:5px 0 10px;">
-                                                                        <div mc:edit="sidebar1">
-                                                                        <h3>Art News</h3>
-                                                                        <div class="bodyContent">XXXXXXXX.</div>
-                                                                        <div class="bodyContent">XXXXXXXX.</div>
-                                                                        <div class="bodyContent">XXXXXXXX.</div>
-                                                                        <div class="bodyContent">XXXXXXXX.</div>
-                                                                        <div class="bodyContent">XXXXXXXX.</div>
-                                                                    </div></td>
-                                                                </tr>
-                                                                <tr mc:hideable>
-                                                                    <td style="border-top:solid 1px #ccc; padding:5px 0 10px;">
-                                                                        <div mc:edit="sidebar2">
-                                                                        <h3>Call to Artists</h3>
-                                                                        <h2>Headline</h2>
-                                                                        <div class="bodyContent">Description.</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr mc:hideable>
-                                                                    <td style="border-top:solid 1px #ccc; padding:5px 0 10px;">
-                                                                        <div mc:edit="sidebar3">
-                                                                        <h3>Classes</h3>
-                                                                        <h2>Headline</h2>
-                                                                        <div class="bodyContent">Description.</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr mc:hideable>
-                                                                    <td style="border-top:solid 1px #ccc; padding:5px 0 10px;">
-                                                                        <div mc:edit="sidebar4">
-                                                                        <h3>Art Jobs</h3>
-                                                                        <h2>Headline</h2>
-                                                                        <div class="bodyContent">Description.</div>
-                                                                        </div>
-                                                                    </td>
-                                                                </tr>
-                                                            </table>
-                                                        </td>
-                                                        <!-- End More Content -->
-                                                </tr></table>
-                                            </td>                                                            
-                                        </tr>
-                                    </table>
-                                    <!-- // End Template Body \\ -->
-                                </td>
-                            </tr>
-                            <tr>
-                                <td align="center" valign="top">
-                                    <!-- // Begin Template Footer \\ -->
-                                    <table border="0" cellpadding="10" cellspacing="0" width="600" id="templateFooter">
-                                        <tr>
-                                            <td valign="top" class="footerContent">
-                                            
-                                                <!-- // Begin Module: Standard Footer \\ -->
-                                                <table border="0" cellpadding="10" cellspacing="0" width="100%">
-                                                    <tr>
-                                                        <td colspan="2" valign="middle" id="social">
-                                                            <div mc:edit="std_social">
-                                                                <a href="*|FORWARD|*">Forward this email to a friend</a> | <a href="http://www.twitter.com/seven_days">Follow us on Twitter</a> | <a href="http://www.facebook.com/sevendaysvt">Like us on Facebook</a>&nbsp;
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td valign="top" width="350">
-                                                            <div mc:edit="std_footer">
-                                                                Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.
-                                                                <br><br>
-                                                                *|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|*
-                                                                <br><br>
-                                                                *|HTML:LIST_ADDRESS_HTML|**|END:IF|* 
-                                                            </div>
-                                                        </td>
-                                                        <td valign="top" width="190" id="monkeyRewards">
-                                                            <div mc:edit="monkeyrewards">
-                                                                <img src="http://www.sevendaysvt.com/general/emailnewsletters/review/sevendays-logo-black.png">
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="2" valign="middle" id="utility">
-                                                            <div mc:edit="std_utility">
-                                                                &nbsp;<a href="*|UNSUB|*">Unsubscribe from all Seven Days emails</a> | <a href="*|UPDATE_PROFILE|*">Update your subscription preferences</a>&nbsp;
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                                                        <br>
-                                                <!-- // End Module: Standard Footer \\ -->
-                                            
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <!-- // End Template Footer \\ -->
-                                </td>
-                            </tr>
-                        </table>
-
-                    </td>
-                </tr>
+                                </td></tr>
+                                <tr><td valign="top" class="footerContent">
+                                    <span style="color:#000; font-size:16px;">*|LIST_SUBSCRIBERS|*</span><br>
+                                    Vermonters subscribe to <i>Seven Days</i> email<br>
+                                    newsletters. If you enjoy re:View,<br>
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" class="emailButton">
+                             <tr>
+                                 <td align="center" valign="middle" class="emailButtonContent">
+                                   <div>
+                                     <a href="*|FORWARD|*" target="_blank">Forward it to a friend</a></div>
+                                  </td>
+                              </tr>
+                         </table><br>Did a friend forward you this email?
+                         <table align="center" border="0" cellpadding="0" cellspacing="0" class="emailButton" style="background-color:gray !important;">
+                             <tr>
+                                 <td align="center" valign="middle" class="emailButtonContent">
+                                   <div>
+                                     <a href="*|LIST:SUBSCRIBE|*" target="_blank" style="color:#fff !important;">Subscribe here!</a></div>
+                                  </td>
+                              </tr>
+                         </table><br>
+                                    *|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|*
+                                </td></tr>
+                                <tr><td valign="top" class="footerContent" style="padding-top:0;">
+                                    <a href="http://sevendaysvt.com" title="Seven Days"><img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/2cfee78b-597c-415c-952d-b960c7241761.png" alt="Seven Days"></a>
+                                    <br>
+                                    *|HTML:LIST_ADDRESS_HTML|* *|END:IF|* 
+                                </td></tr>
+                                <tr><td valign="top" class="footerContent" style="padding-top:0;">
+                                    <a href="*|UNSUB|*">unsubscribe from this list</a>&nbsp;&nbsp;&nbsp;<a href="*|UPDATE_PROFILE|*">update subscription preferences</a>&nbsp;
+                                </td></tr>
+                            </table>
+                            <!-- // END FOOTER -->
+                        </td></tr>
+                    </table>
+                    <!-- // END TEMPLATE -->
+                </td></tr>
             </table>
         </center>
     </body>
