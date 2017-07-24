@@ -386,6 +386,9 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
             height:auto;
             max-width:560px;
         }
+        .bodyGenre{
+            padding-bottom: 10px;
+        }
         #bodyImage{
             height:auto !important;
             /*@editable*/max-width:560px !important;
@@ -565,7 +568,7 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
 
 }   @media only screen and (max-width: 480px){
         #bodyCell{
-            padding:10px !important;
+            padding:0 !important;
         }
 
 }   @media only screen and (max-width: 480px){
@@ -758,13 +761,13 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
             /*@editable*/line-height:115% !important;
         }
 
-}   @media only screen and (max-width: 480px){
-        .footerContent a{
-            display:block !important;
-        }
+} </style>
 
-}</style></head>
+</head>
     <body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+        <!--[if mso]>
+         <table><tr><td width="580">
+        <![endif]-->
         <center>
             <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
                 <tr><td align="center" valign="top" id="bodyCell">
@@ -777,7 +780,7 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
                                     Use this area to offer a short teaser of your email's content. Text here will show in the preview area of some email clients.
                                 </td>
                                 <!-- *|IFNOT:ARCHIVE_PAGE|* -->
-                                <td valign="top" width="180" class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:0;">
+                                <td valign="top" width="180px" class="preheaderContent" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:0;">
                                     Email not displaying correctly?<br><a href="*|ARCHIVE|*" target="_blank">View it in your browser</a>.
                                 </td>
                                 <!-- *|END:IF|* -->
@@ -789,10 +792,10 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
                             <!-- BEGIN HEADER // -->
                             <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateHeader">
                                 <tr><td valign="top" class="headerContent">
-                                    <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/0f94bc94-ddef-42d5-bab6-8471c769b53c.png" style="max-width:600px;" class="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="">
+                                    <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/0f94bc94-ddef-42d5-bab6-8471c769b53c.png" style="max-width:650px;" class="headerImage" mc:label="header_image" mc:edit="header_image" mc:allowdesigner="" mc:allowtext="">
                                 </td></tr>
                                 <tr mc:hideable><td valign="top" class="headerContent">
-                                    <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/ef14cd9c-8a2a-44d7-a86f-aae047374359.jpg" style="max-width:600px;" class="headerImage" mc:label="header_image_ad" mc:edit="header_ad_image" mc:allowdesigner="">
+                                    <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/ef14cd9c-8a2a-44d7-a86f-aae047374359.jpg" style="max-width:650px;" class="headerImage" mc:label="header_image_ad" mc:edit="header_ad_image" mc:allowdesigner="">
                                 </td></tr>
                                  <tr><td valign="top" class="dateline">
                                     <div mc:edit="date"><h4>Tuesday, April 21, 2017</h4></div>
@@ -815,9 +818,10 @@ body, #bodyTable, #bodyCell{height:100% !important; margin:0; padding:0; width:1
                             <!-- BEGIN BODY // -->
                             <table border="0" cellpadding="0" cellspacing="0" width="100%"> <!--EDIT-->
                                 <tr><td valign="top" class="bodyContent">
+                                    <div class="bodyGenre" mc:edit="spotlight_genre"><h4>Genre</h4></div>
                                     <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/ce120157-2c0a-4731-a00a-4040b725fe9e.jpg" alt="" border="0" id="bodyImage" style="margin: 0; padding: 0;" mc:edit="spotlight_image"><br><br>
                                     <div mc:edit="spotlight_head1"><h2>Headline</h2>
-Text goes here</div>
+                                        Text goes here</div>
                                     <!-- BUTTON // -->
                                     <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
                                         <tr>
@@ -842,11 +846,11 @@ Text goes here</div>
                                             <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/e3d5afa9-7e5e-411c-904f-9bc4596464e4.jpg" class="columnImage" mc:edit="left_column_image1">
                                       </td></tr>
                                       <tr><td valign="top" class="leftColumnContent">
-                                      <div mc:edit="left_column_content1"><h2><a href="#">Headline</a></h2>Text goes here</div>
+                                      <div mc:edit="left_column_content1"><h2>Headline</h2>Text goes here</div>
 <!-- BUTTON // -->
                                             <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
                                                 <tr><td align="center" valign="middle" class="emailButtonContent">
-                                                    <div mc:edit="button_content2"><a href="#" target="_blank">Read more</a></div>
+                                                    <div mc:edit="button_content2">Read more</div>
                                                 </td></tr>
                                             </table>
                                         </td></tr>
@@ -861,12 +865,12 @@ Text goes here</div>
                                             <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/e3d5afa9-7e5e-411c-904f-9bc4596464e4.jpg" class="columnImage" mc:edit="right_column_image1">
                                         </td></tr>
                                         <tr><td valign="top" class="rightColumnContent">
-                                            <div mc:edit="right_column_content1"><h2><a href="#">Headline</a></h2>
+                                            <div mc:edit="right_column_content1"><h2>Headline</h2>
 Text goes here</div>
 <!-- BUTTON // -->
                                             <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
                                                 <tr><td align="center" valign="middle" class="emailButtonContent">
-                                                    <div mc:edit="button_content3"><a href="#" target="_blank">Read More</a></div>
+                                                    <div mc:edit="button_content3">Read More</div>
                                                 </td></tr>
                                             </table>
                                         </td></tr>
@@ -882,7 +886,7 @@ Text goes here</div>
                                     <td valign="top" class="bodyContent" id="readerreview">
                                         <img align="right" src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/251ff21a-af1c-4bf8-a9ed-1f7a0b681ed3.png" height="90" width="90" style="width:90px;height:90px;margin-left:10px;margin-bottom:5px;">
                                         <h4>Reader Review</h4>
-                                        <div mc:edit="readerreview"><h3><a href="http://www.sevendaysvt.com/vermont/grapevine_grille/Location?oid=2125411">Restaurant name</a></h3>
+                                        <div mc:edit="readerreview"><h3>Restaurant name [linked]</h3>
 Review review review review.<br>
 <em>&mdash; Commenter name</em></div>
                                         <!-- BUTTON // -->
@@ -911,14 +915,14 @@ Review review review review.<br>
                                             <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/e3d5afa9-7e5e-411c-904f-9bc4596464e4.jpg" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image2">
                                         </td></tr>
                                         <tr><td valign="top" class="leftColumnContent">
-                                            <div mc:edit="left_column_content2"><h2><a href="#">Headline</a></h2>
+                                            <div mc:edit="left_column_content2"><h2>Headline</h2>
                                             Text goes here</div>
                                             <!-- BUTTON // -->
                                             <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
                                                 <tr>
                                                     <td align="center" valign="middle" class="emailButtonContent">
                                                         <div mc:edit="button_content4">
-                                                        <a href="#" target="_blank">Read more</a></div>
+                                                        Read more</div>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -934,12 +938,12 @@ Review review review review.<br>
                                             <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/e3d5afa9-7e5e-411c-904f-9bc4596464e4.jpg" class="columnImage" mc:label="right_column_image" mc:edit="right_column_image2">
                                         </td></tr>
                                         <tr><td valign="top" class="rightColumnContent">
-                                            <div mc:edit="right_column_content2"><h2><a href="#">Headline</a></h2>
+                                            <div mc:edit="right_column_content2"><h2>Headline</h2>
                                             Text goes here</div>
                                             <!-- BUTTON // -->
                                             <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
                                                 <tr><td align="center" valign="middle" class="emailButtonContent">
-                                                    <div mc:edit="button_content5"><a href="#" target="_blank">Buy tickets</a></div>
+                                                    <div mc:edit="button_content5">Buy tickets</div>
                                                 </td></tr>
                                             </table>
                                         </td></tr>
@@ -955,23 +959,23 @@ Review review review review.<br>
                                     <td valign="top" class="bodyContent" id="poll">
                                         <img align="right" src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/3ad91106-e513-45e9-bd80-e29ea67bc8b0.png" height="90" width="90" style="width:90px;height:90px;margin-left:10px;margin-bottom:5px;">
                                         <h4>Foodie Poll</h4>
-<div mc:edit="poll_content"><h3>Poll question goes here?</h3>
+                                            <div mc:edit="poll_content"><h3>Poll question goes here?</h3>
 
-<ul>
-    <li>Options go here</li>
-</ul>
-</div>
+                                            <ul>
+                                                <li>Options go here</li>
+                                            </ul>
+                                            </div>
                                         <!-- BUTTON // -->
                                         <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
                                             <tr>
                                                 <td align="center" valign="middle" class="emailButtonContent">
-                                                    <div mc:edit="button_content6"><a href="#" target="_blank">Answer it!</a></div>
+                                                    <div mc:edit="button_content6">Answer it!</div>
                                                 </td>
                                                 <td align="center" valign="middle" style="background-color:#f1f1f1;">
                                                 &nbsp;&nbsp;
                                                 </td>
                                                 <td align="center" valign="middle" class="emailButtonContent">
-                                                    <div mc:edit="button_content7"><a href="#" target="_blank">See last week&#39;s results</a></div>
+                                                    <div mc:edit="button_content7">See last week&#39;s results</div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -992,14 +996,15 @@ Review review review review.<br>
                                             <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/e3d5afa9-7e5e-411c-904f-9bc4596464e4.jpg" class="columnImage" mc:label="left_column_image" mc:edit="left_column_image3">
                                         </td></tr>
                                         <tr><td valign="top" class="leftColumnContent">
-                                            <div mc:edit="left_column_content3"><h2><a href="#">Headline</a></h2>
+                                            <div mc:edit="left_column_content3"><h2>Headline</h2>
                                             Text goes here</div>
                                             <!-- BUTTON // -->
                                             <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
                                                 <tr>
                                                     <td align="center" valign="middle" class="emailButtonContent">
                                                         <div mc:edit="button_content4">
-                                                        <a href="#" target="_blank">Read more</a></div>
+                                                            Read more
+                                                        </div>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -1015,12 +1020,12 @@ Review review review review.<br>
                                             <img src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/e3d5afa9-7e5e-411c-904f-9bc4596464e4.jpg" class="columnImage" mc:label="right_column_image" mc:edit="right_column_image3">
                                         </td></tr>
                                         <tr><td valign="top" class="rightColumnContent">
-                                            <div mc:edit="right_column_content2"><h2><a href="#">Headline</a></h2>
+                                            <div mc:edit="right_column_content2"><h2>Headline</h2>
                                             Text goes here</div>
                                             <!-- BUTTON // -->
                                             <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
                                                 <tr><td align="center" valign="middle" class="emailButtonContent">
-                                                    <div mc:edit="button_content5"><a href="#" target="_blank">Buy tickets</a></div>
+                                                    <div mc:edit="button_content5">Buy tickets</div>
                                                 </td></tr>
                                             </table>
                                         </td></tr>
@@ -1042,9 +1047,9 @@ Review review review review.<br>
                                         <tr>
                                             <td valign="top" class="leftColumnContent">
                                                 <div mc:edit="events_content"><ul style="margin-left:0;padding-left:15px;">
-                                                    <li><a href="#">Event</a><br> Location. Date.</li>
-                                                    <li><a href="#">Event</a><br> Location. Date.</li>
-                                                    <li><a href="#">Event</a><br> Location. Date.</li>
+                                                    <li>Event<br>Location. Date.</li>
+                                                    <li>Event<br> Location. Date.</li>
+                                                    <li>Event<br> Location. Date.</li>
                                                 </ul></div>
                                             </td>
                                         </tr>
@@ -1097,7 +1102,7 @@ Review review review review.<br>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td valign="top" class="leftColumnContent" mc:edit="sponsored_content"><h2><a href="#">Sponsored Location Title</a></h2>
+                                            <td valign="top" class="leftColumnContent" mc:edit="sponsored_content"><h2>Sponsored Location Title</h2>
 <img align="left" src="https://gallery.mailchimp.com/8ea997a95afca8f165fa083c4/images/7552ac4d-fcfc-41a4-a48a-8263ef331b8d.jpg" style="margin-right:10px;margin-bottom:5px;" width="100px">Lollipop cookie cake pastry cookie. Cupcake fruitcake liquorice marshmallow chupa chups cookie tootsie roll. Powder tiramisu toffee gummies sugar plum toffee gummies sweet roll bonbon. Jelly chupa chups oat cake cake.&nbsp;</td>
                                         </tr>
                                     </table>
@@ -1107,15 +1112,15 @@ Review review review review.<br>
                                         <tr><td valign="top" class="rightColumnContent">
                                         <h4>Foodie Jobs</h4>
                                         <div mc:edit="jobs_content"><ul style="margin-left:0;padding-left:15px;">
-    <li><a href="#" target="_blank">Job</a>, Business, Town</li>
-    <li><a href="#" target="_blank">Job</a>, Business, Town</li>
-    <li><a href="#" target="_blank">Job</a>, Business, Town</li>
-</ul>
-</div>
+                                            <li>Job, Business, Town</li>
+                                            <li>Job, Business, Town</li>
+                                            <li>Job, Business, Town</li>
+                                        </ul>
+                                        </div>
                                         <table border="0" cellpadding="0" cellspacing="0" class="emailButton">
                                             <tr>
                                                 <td align="center" valign="middle" class="emailButtonContent">
-                                                    <div mc:edit="button_content10"><a href="http://classifieds.sevendaysvt.com/listAds.htm" target="_blank">Find more food jobs</a></div>
+                                                    <div mc:edit="button_content10"><a href="https://jobs.sevendaysvt.com/job-category/restaurant-food-service/" target="_blank">Find more food jobs</a></div>
                                                 </td>
                                             </tr>
                                         </table>
@@ -1188,7 +1193,7 @@ Review review review review.<br>
                                     *|HTML:LIST_ADDRESS_HTML|* *|END:IF|*
                                 </td></tr>
                                 <tr><td valign="top" class="footerContent" style="padding-top:0;">
-                                    Want to unsubscribe from the <b>Bite Club</b> newsletter?<br><a href="*|UPDATE_PROFILE|*">Update your subscription preferences</a>.<br><br>To stop receiving <b>all <i>Seven Days</i></b> newsletters, <a href="*|UNSUB|*">unsubscribe here</a>..
+                                    Want to unsubscribe from the <b>Bite Club</b> newsletter?<br><a href="*|UPDATE_PROFILE|*">Update your subscription preferences</a>.<br><br>To stop receiving <b>all <i>Seven Days</i></b> newsletters, <a href="*|UNSUB|*">unsubscribe here</a>.
                                 </td></tr>
                             </table>
                             <!-- // END FOOTER -->
@@ -1198,5 +1203,9 @@ Review review review review.<br>
                 </td></tr>
             </table>
         </center>
+        <!--[if mso]>
+         </td></tr></table>
+         </center>
+        <![endif]-->
     </body>
 </html>
